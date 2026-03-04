@@ -1,5 +1,7 @@
 FROM ubuntu
 
-COPY *.txt /text-files/
+WORKDIR /my-dir
+
+COPY ./ ./
 
 ENTRYPOINT [ "/bin/bash", "-c", "sleep 500" ]
